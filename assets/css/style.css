@@ -1,37 +1,36 @@
-/* =================================== */
-/*	Basic Style 
-/* =================================== */
+/* Basic Styles */
+
 body {
-  background-color: #fff;
-  font-family: "Scope One", "Open Sans", sans-serif;
-  line-height: 24px;
-  font-size: 16px;
-  color: #818181;
+    background-color: #fff;
+    font-family: "Scope One", "Open Sans", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    color: #818181;
 }
 
 figure,
 p,
 address {
-  margin: 0;
+    margin: 0;
 }
 
 iframe {
-  border: 0;
+    border: 0;
 }
 
 a {
-  color: #0aa6bd;
-  transition: all 0.3s ease-out 0s;
-  font-family: 'Vollkorn', sans-serif;
-  font-weight: bolder;
+    color: #0aa6bd;
+    transition: all 0.3s ease-out 0s;
+    font-family: 'Vollkorn', sans-serif;
+    font-weight: bolder;
 }
 
 a,
 a:hover,
 a:focus,
 .btn:focus {
-  text-decoration: none;
-  outline: none;
+    text-decoration: none;
+    outline: none;
 }
 
 h1,
@@ -46,25 +45,108 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Open Sans", sans-serif;
-  color: #252525;
+    font-family: "Open Sans", sans-serif;
+    color: #252525;
 }
 
 p {
-  font-size: 15px;
+    font-size: 16px;
 }
 
 /* Navigation */
 header {
     font-size: 20px;
-    
-    img {
-        width: 100px;
-        height: 100px;
-    }
 }
 
 /* main */
 main > section {
-  padding: 70px 0;
+    padding: 70px 0;
 }
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        position: absolute; 
+        top: 0;
+        left: 0; 
+        z-index: 1;
+        animation: imgGrow 4s forwards; /* Trigger image animation */
+        @media (max-width: 768px) {
+                height: 50vh;
+                width: 100vw;
+            }
+    }
+
+    h1 {
+        margin-bottom: 0.5rem;
+        color: white;
+        @media (max-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 50%;
+        right: 30%;
+        transform: translateY(-50%) scale(0); /* Start scaled down */
+        background: rgba(108, 120, 158, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 2;
+        animation: grow 1s forwards; /* Trigger animation */
+
+        @media (max-width: 768px) {
+            position: absolute;
+            top: 25%; 
+            left: 20%;
+            width: 60vw;
+        }
+    }
+    @media (max-width: 768px) {
+        #hero img {
+            height: 50vh;
+            width: 100vw;
+        }
+    
+        .overlay {
+            position: absolute;
+            top: 25%; 
+            left: 20%;
+            width: 60vw;
+        }
+    }
+}
+
+/* Animation Background Hero Image */
+@keyframes imgGrow {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animation Overlay */
+@keyframes grow {
+    0% {
+        transform: translateY(-50%) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
