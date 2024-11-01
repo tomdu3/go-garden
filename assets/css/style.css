@@ -1,0 +1,70 @@
+/* =================================== */
+/*	Basic Style 
+/* =================================== */
+body {
+  background-color: #fff;
+  font-family: "Scope One", "Open Sans", sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  color: #818181;
+}
+
+figure,
+p,
+address {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+a {
+  color: #0aa6bd;
+  transition: all 0.3s ease-out 0s;
+  font-family: 'Vollkorn', sans-serif;
+  font-weight: bolder;
+}
+
+a,
+a:hover,
+a:focus,
+.btn:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Open Sans", sans-serif;
+  color: #252525;
+}
+
+p {
+  font-size: 15px;
+}
+
+/* Navigation */
+header {
+    font-size: 20px;
+    
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* main */
+main > section {
+  padding: 70px 0;
+}
