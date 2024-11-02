@@ -150,3 +150,25 @@ main > section {
     }
 }
 
+/* Carousel */
+#services {
+    color: white;
+    #myCarousel {
+        .carousel-item {
+            img {
+                width: 300px;
+                height: 500px;
+                object-fit: cover;
+            }
+        }
+    }
+    .opaque-background {
+        background-color: rgba(0, 0, 0, 0.5); /* Black background with 70% opacity */
+        padding: 20px; /* Optional: Add some padding */
+    }
+
+    h5, p {
+        color: white;
+    }
+
+}
