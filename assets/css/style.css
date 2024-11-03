@@ -1,7 +1,6 @@
 /* Basic Styles */
 
 body {
-    background-color: #fff;
     font-family: "Scope One", "Open Sans", sans-serif;
     line-height: 24px;
     font-size: 16px;
@@ -19,10 +18,13 @@ iframe {
 }
 
 a {
-    color: #0aa6bd;
+    color: #fff;
     transition: all 0.3s ease-out 0s;
     font-family: 'Vollkorn', sans-serif;
     font-weight: bolder;
+    &:hover {
+        color: #0aa6bd;
+    }
 }
 
 a,
@@ -59,8 +61,8 @@ header {
 }
 
 /* main */
-main > section {
-    padding: 70px 0;
+main {
+    
 }
 
 /* Hero Section */
@@ -194,4 +196,13 @@ main > section {
         margin-top: -20px; /* Adjust as needed */
         padding-top: 0;
     }
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
