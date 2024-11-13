@@ -152,6 +152,13 @@ main {
     }
 }
 
+/* Topics */
+
+#topics {
+    background-color: rgb(0, 0, 0);
+    padding: 2rem;
+}
+
 /* Carousel */
 #services {
     color: white;
